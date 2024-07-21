@@ -28,7 +28,7 @@
 </br>
 
 ## 🔗 배포 링크 및 테스트 계정
-<a href="bbangradise.netlify.app" target="_blank"> BBang-radise </a>
+<a href="https://bbangradise.netlify.app" target="blank"> BBang-radise </a>
 
 ```
 email: seller1@market.com
