@@ -22,14 +22,16 @@ MainPageClass.propTypes = {
   toggle: PropTypes.string,
   adress: PropTypes.string,
   quantity: PropTypes.string,
+  srcSet: PropTypes.string,
+  sizes: PropTypes.string,
 };
 
-function MainPageClass({ img, title, text, toggle, adress, quantity }) {
+function MainPageClass({ img, title, text, toggle, adress, quantity, srcSet, sizes }) {
   const navigate = useNavigate();
 
   return (
     <MainPageClassCard onClick={() => navigate(`/class`)}>
-      <MainPageClassImg src={img} />
+      <MainPageClassImg src={img} srcSet={srcSet} sizes={sizes} alt="Main Cover" />
 
       <MainPageClassBookmark>
         <BookmarkButton toggle={toggle} />

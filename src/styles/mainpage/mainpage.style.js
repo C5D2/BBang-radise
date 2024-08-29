@@ -20,21 +20,30 @@ export const MainPageCoverWrapper = styled.div`
   align-items: center;
   position: relative;
 
+  & img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    transition: all 0.3s ease;
+
+    @media (max-width: 767px) {
+      max-width: 80%;
+    }
+  }
+
   & img:first-of-type {
     margin-top: -280px;
+
+    @media (max-width: 767px) {
+      margin-top: -220px;
+    }
   }
 
   & img:last-child {
     margin-bottom: 400px;
-  }
 
-  @media all and (min-width: 768px) {
-    & img:last-child {
-      margin-bottom: 400px;
-    }
-
-    & img:first-of-type {
-      margin-top: -200px;
+    @media (max-width: 767px) {
+      margin-bottom: 200px;
     }
   }
 `;
@@ -47,6 +56,10 @@ export const MainPageClassWrapper = styled.div`
   padding-top: 100px;
   @media all and (min-width: 768px) {
     padding-top: 140px;
+  }
+  @media (max-width: 767px) {
+    padding-top: 70px;
+    gap: 20px;
   }
 `;
 
@@ -71,6 +84,9 @@ export const MainPageBottomWrapper = styled.div`
     margin: 0 -70px;
     height: 150vh;
     padding-top: 200px;
+  }
+  @media (max-width: 767px) {
+    height: 40vh;
   }
 `;
 
