@@ -40,12 +40,9 @@ function RecipeAdd() {
     try {
       formData.content = quillValue;
       formData.type = 'recipe';
-      console.log(formData);
 
       if (formData.extra.length > 0) {
-        // console.log(formData);
         const fileRes = await postSingleFile(formData.extra[0]);
-        console.log(fileRes);
         formData.extra = fileRes.data.item[0].name;
       } else {
         delete formData.extra;
@@ -64,9 +61,7 @@ function RecipeAdd() {
     }
   };
 
-  useEffect(() => {
-    console.log('퀼:' + quillValue);
-  }, [quillValue]);
+  useEffect(() => {}, [quillValue]);
 
   const optionData = [
     { value: '빵', label: '빵' },

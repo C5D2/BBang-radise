@@ -131,7 +131,6 @@ function ClassCard({ item }) {
 
   const mainImage = item.mainImages ? item?.mainImages[0]?.name : item?.image.name;
   const { badgeType, quantityColor, textColor, expired } = useBadge(item);
-  console.log(badgeType);
   return (
     <ClassCardContainer>
       <ClassCardBookmark>

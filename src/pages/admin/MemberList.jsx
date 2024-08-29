@@ -30,7 +30,6 @@ function MemberList() {
         custom: custom,
       },
     });
-    console.log(data);
     return { users: data?.item, nextPage: data?.item?.length > 0 ? pageParam + 1 : undefined };
   };
 
@@ -51,8 +50,6 @@ function MemberList() {
       fetchNextPage();
     }
   }, [fetchNextPage, isPageEnd]);
-
-  console.log(userList);
 
   const handleLogout = () => {
     setUserData(null);

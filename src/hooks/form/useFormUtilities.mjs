@@ -4,7 +4,6 @@ const useFormUtilities = () => {
     const targetFilesArray = Array.from(targetFiles).slice(0, maxfilenumber);
 
     const selectedFiles = targetFilesArray.map((file) => URL.createObjectURL(file));
-    console.log('selectedFiles:', selectedFiles);
     setImages((prev) => prev.concat(selectedFiles));
   };
 
@@ -13,7 +12,6 @@ const useFormUtilities = () => {
       const selectedFiles = Array.from(images).slice(0, maxfilenumber);
       const fileURLs = selectedFiles.map((file) => URL.createObjectURL(file));
       setImages(fileURLs);
-      console.log(selectedFiles);
     }
   };
 

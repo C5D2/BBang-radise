@@ -80,11 +80,8 @@ function ClassAdd() {
 
   const onSubmit = async (formData) => {
     try {
-      console.log(formData);
-
       if (formData.mainImages.length > 0) {
         const fileRes = await postSingleFile(formData.mainImages[0]);
-        console.log(fileRes);
         formData.mainImages = fileRes.data.item;
       } else {
         delete formData.mainImages;
@@ -92,8 +89,7 @@ function ClassAdd() {
 
       if (formData.extra.detailImages.length > 0) {
         const fileRes = await postMultipleFiles(formData.extra.detailImages);
-        console.log(detailImages);
-        console.log(fileRes);
+
         formData.extra.detailImages = fileRes.data.item.map((item) => item);
       } else {
         delete formData.extra.detailImages;
