@@ -2,11 +2,11 @@ import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 
 const popup = keyframes`
-from{
-  opacity:0;
+from {
+  opacity: 0;
 }
 to {
-  opacity:1;
+  opacity: 1;
 }
 `;
 
@@ -20,13 +20,15 @@ const MainPageCoverImg = styled.img`
 
 MainPageCover.propTypes = {
   src: PropTypes.string,
+  srcSet: PropTypes.string,
+  sizes: PropTypes.string,
   width: PropTypes.string,
   margintop: PropTypes.string,
   marginleft: PropTypes.string,
 };
 
-function MainPageCover({ src, width, margintop, marginleft }) {
-  return <MainPageCoverImg src={src} width={width} marginTop={margintop} marginLeft={marginleft} />;
+function MainPageCover({ src, srcSet, sizes, width, margintop, marginleft }) {
+  return <MainPageCoverImg src={src} srcSet={srcSet} sizes={sizes} width={width} marginTop={margintop} marginLeft={marginleft} />;
 }
 
 export default MainPageCover;
