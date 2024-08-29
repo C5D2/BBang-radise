@@ -32,10 +32,8 @@ function Optional({ onSubmit }) {
   // };
 
   const onOptionalSubmit = (data) => {
-    console.log(data);
     const mergedData = { ...formData, ...data };
     onSubmit(mergedData);
-    console.log(mergedData);
   };
 
   return (

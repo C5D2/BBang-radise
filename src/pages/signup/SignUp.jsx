@@ -23,25 +23,21 @@ function SignUp() {
   const [step, setStep] = useState(0);
   const setFormData = useFormStore((state) => state.setFormData);
 
-  const handleRequiredSubmit = (formData) => {
+  const handleRequiredSubmit = () => {
     setStep(1);
-    console.log(formData);
   };
 
-  const handleSaveFormData = (formData) => {
+  const handleSaveFormData = () => {
     setStep(0);
-    console.log(formData);
   };
 
   const handleOptionalSubmit = async (formData) => {
     try {
       formData.type = 'user';
       formData.extra = { confirm: true };
-      console.log(formData);
 
       if (formData.profileImage.length > 0) {
         const fileRes = await postSingleFile(formData.profileImage[0]);
-        console.log(fileRes);
         formData.profileImage = fileRes.data.item[0].name;
       } else {
         delete formData.profileImage;
@@ -63,9 +59,11 @@ function SignUp() {
 
   return (
     <Section>
-      <Text typography="display_l">회원가입</Text>
-      {toast.show && <Toast setToast={setToast} text={toast.message} />}
       <S.SignUpWrapper>
+        <S.SignUpTitleText>
+          <Text typography="display_l">회원가입</Text>
+        </S.SignUpTitleText>
+        {toast.show && <Toast setToast={setToast} text={toast.message} />}
         <S.SignUpInputWrapper>
           {step === 0 && <Required setStep={setStep} onSubmit={handleRequiredSubmit} />}
           {step === 1 && <Optional setStep={setStep} onSaveFormData={handleSaveFormData} onSubmit={handleOptionalSubmit} />}

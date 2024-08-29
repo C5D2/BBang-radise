@@ -40,7 +40,6 @@ function ClassDetail() {
   const axios = useCustomAxios();
 
   const item = data?.item;
-  console.log(item);
   const [products, setProducts] = useState([{ _id: '', name: '', quantity: 1 }]);
 
   useEffect(() => {
@@ -52,8 +51,6 @@ function ClassDetail() {
       });
     }
   }, [item]);
-
-  console.log(products);
 
   const { badgeType, quantityColor, textColor, expired } = useBadge(item);
 
@@ -90,7 +87,6 @@ function ClassDetail() {
       const res = await axios.post(`orders`, {
         products: [{ _id: products._id, name: products.name, quantity: products.quantity }],
       });
-      console.log(res);
       toggleModal();
       navigate(`/class/${res?.data.item._id}/order`, {
         state: {

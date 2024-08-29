@@ -48,10 +48,7 @@ function RecipeEdit() {
 
   const [quillValue, setquillValue] = useState(item.content);
 
-  console.log(item);
-  useEffect(() => {
-    console.log('퀼:' + quillValue);
-  }, [quillValue]);
+  useEffect(() => {}, [quillValue]);
 
   useEffect(() => {
     if (item) {
@@ -63,18 +60,13 @@ function RecipeEdit() {
     }
   }, [item]);
 
-  console.log(item);
-
   const onSubmit = async (formData) => {
     try {
       formData.content = quillValue;
       formData.type = 'recipe';
-      console.log(formData);
 
       if (formData.extra) {
-        console.log(formData);
         const fileRes = await postSingleFile(formData.extra[0]);
-        console.log(fileRes);
         if (fileRes.data.item.length > 0) {
           formData.extra = fileRes.data.item[0].name;
         } else {
@@ -84,10 +76,8 @@ function RecipeEdit() {
 
       const res = await axios.patch(`/posts/${_id}`, formData);
 
-      console.log(res);
       navigate(`/recipe/${_id}`);
     } catch (err) {
-      console.log(err);
       // AxiosError(네트워크 에러-response가 없음, 서버의 4xx, 5xx 응답 상태 코드를 받았을 때-response 있음)
       if (err.response?.data.errors) {
         err.response?.data.errors.forEach((error) => setError(error.path, { message: error.msg }));

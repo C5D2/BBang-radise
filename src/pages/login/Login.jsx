@@ -20,6 +20,12 @@ function Login() {
     message: '',
   });
 
+  const kakaoLink = `https://kauth.kakao.com/oauth/authorize?client_id=${import.meta.env.VITE_KAKAO_REST_API_KEY}&redirect_uri=${import.meta.env.VITE_REDIRECT_URI}&response_type=code`;
+
+  const handleKakaoLogin = () => {
+    window.location.href = kakaoLink;
+  };
+
   // zustand setter 반환
   const setUserData = useMemberStore((state) => state.setUser);
 
@@ -36,10 +42,8 @@ function Login() {
   });
 
   const onSubmit = async (formData) => {
-    console.log(formData);
     try {
       const res = await postLogin(formData);
-      console.log(res);
 
       setUserData({
         _id: res.data.item._id,
@@ -65,11 +69,13 @@ function Login() {
   return (
     <Section>
       <S.LoginWrapper>
-        <Text typography="display_l">로그인</Text>
+        <S.LoginTitleText>
+          <Text typography="display_l">로그인</Text>
+        </S.LoginTitleText>
 
         {toast.show && <Toast setToast={setToast} text={toast.message} />}
 
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <S.StyledForm onSubmit={handleSubmit(onSubmit)}>
           <S.LoginFormWrapper>
             <S.LoginInputWrapper>
               <div>
@@ -113,9 +119,10 @@ function Login() {
               >
                 회원가입
               </Button>
+              <Button onClick={handleKakaoLogin}>카카오 로그인</Button>
             </S.LoginButton>
           </S.LoginFormWrapper>
-        </form>
+        </S.StyledForm>
       </S.LoginWrapper>
     </Section>
   );

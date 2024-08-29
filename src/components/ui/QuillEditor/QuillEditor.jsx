@@ -21,7 +21,6 @@ function QuillEditor({ values, setValues }) {
 
       try {
         const fileRes = await postSingleFile(file);
-        console.log(fileRes);
         const imgUrl = `${import.meta.env.VITE_API_SERVER}` + fileRes.data.item[0].path;
         const editor = quillRef.current.getEditor();
         const range = editor.getSelection();

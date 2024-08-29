@@ -32,8 +32,6 @@ export const useGetMyClassList = () => {
   const axios = useCustomAxios();
   const user = useMemberStore((state) => state.user);
   const hasPermission = user.type === 'seller';
-  console.log(user.type);
-  console.log(hasPermission);
 
   return useQuery({
     queryKey: ['seller', 'products'],

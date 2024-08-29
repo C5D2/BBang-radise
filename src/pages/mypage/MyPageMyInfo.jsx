@@ -20,10 +20,8 @@ function MyPageMyInfo() {
   const { patchRequestRankUp } = useUserApis();
 
   const user = data?.item;
-  console.log(user);
 
   const isValid = user.posts >= 5;
-  console.log(isValid);
 
   const handleLogout = () => {
     setUserData(null);

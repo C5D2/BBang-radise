@@ -46,7 +46,6 @@ function RecipeList() {
   };
 
   const user = useMemberStore().user;
-  console.log(user);
   const navigate = useNavigate();
   const toggleModal = useModalStore((state) => state.toggleModal);
 
@@ -66,8 +65,6 @@ function RecipeList() {
   };
 
   const recipeList = data?.item.map((item) => <RecipeListItem key={item._id} item={item} />);
-
-  console.log(recipeList);
 
   return (
     <Section>
