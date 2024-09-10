@@ -20,11 +20,25 @@ function Login() {
     message: '',
   });
 
-  const kakaoLink = `https://kauth.kakao.com/oauth/authorize?client_id=${import.meta.env.VITE_KAKAO_REST_API_KEY}&redirect_uri=${import.meta.env.VITE_REDIRECT_URI}&response_type=code`;
+  // const kakaoLink = `https://kauth.kakao.com/oauth/authorize?client_id=${import.meta.env.VITE_KAKAO_REST_API_KEY}&redirect_uri=${encodeURIComponent(
+  //   import.meta.env.VITE_REDIRECT_URI,
+  // )}&response_type=code&state=from=/`;
 
-  const handleKakaoLogin = () => {
-    window.location.href = kakaoLink;
-  };
+  // const handleKakaoLogin = () => {
+  //   window.location.href = kakaoLink;
+  // };
+
+  // const handleKakaoLogin = () => {
+  //   if (!window.Kakao.isInitialized()) {
+  //     window.Kakao.init(import.meta.env.VITE_KAKAO_REST_API_KEY);
+  //   }
+
+  //   Kakao.Auth.authorize({
+  //     redirectUri: `${window.location.origin}/users/login/kakao`,
+  //     scope: 'profile_nickname,profile_image', // 사용자의 동의를 받을 항목
+  //     state: `from=${location.state?.from || '/'}`, // redirectUri의 state 파라미터로 전달될 값
+  //   });
+  // };
 
   // zustand setter 반환
   const setUserData = useMemberStore((state) => state.setUser);
@@ -44,7 +58,6 @@ function Login() {
   const onSubmit = async (formData) => {
     try {
       const res = await postLogin(formData);
-
       setUserData({
         _id: res.data.item._id,
         name: res.data.item.name,
@@ -119,7 +132,7 @@ function Login() {
               >
                 회원가입
               </Button>
-              <Button onClick={handleKakaoLogin}>카카오 로그인</Button>
+              {/* <Button onClick={handleKakaoLogin}>카카오 로그인</Button> */}
             </S.LoginButton>
           </S.LoginFormWrapper>
         </S.StyledForm>

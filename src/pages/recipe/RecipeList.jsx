@@ -11,6 +11,7 @@ import Modal from '@components/ui/Modal';
 import RoundButton from '@components/ui/button/RoundButton';
 import * as S from '@styles/recipe/recipelist.style';
 import { useModalStore } from '@zustand/modalStore.mjs';
+import MetaTag from '@components/ui/MetaTag';
 
 function RecipeList() {
   const axios = useCustomAxios();
@@ -65,9 +66,12 @@ function RecipeList() {
   };
 
   const recipeList = data?.item.map((item) => <RecipeListItem key={item._id} item={item} />);
+  const path = `${import.meta.env.VITE_BASE_URL}/recipe`;
 
   return (
     <Section>
+      <MetaTag title={'베이킹 레시피 목록'} description={'베이킹 레시피 목록입니다.'} url={path} />
+
       <S.RecipeListWrapper>
         <S.RecipeListPage>
           <S.RecipeListText>

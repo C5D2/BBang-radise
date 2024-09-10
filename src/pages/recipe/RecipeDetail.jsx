@@ -8,6 +8,7 @@ import useMemberStore from '@zustand/memberStore.mjs';
 import RoundButton from '@components/ui/button/RoundButton';
 import Text from '@components/ui/Text';
 import GlobalRecipeContentStyle from '@styles/recipe/GlobalRecipeContentStyle';
+import MetaTag from '@components/ui/MetaTag';
 
 function RecipeDetail() {
   const axios = useCustomAxios();
@@ -38,12 +39,17 @@ function RecipeDetail() {
 
   const item = data?.item;
 
+  const imgSrc = `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.extra}`;
+  const path = `${import.meta.env.VITE_BASE_URL}/recipe/${_id}`;
+
   return (
     <Section>
+      <MetaTag title={item.name} description={item.content} imgSrc={imgSrc} url={path} />
+
       {item && (
         <S.RecipeDetailWrapper>
           <S.RecipeDetailCard className="card">
-            <S.RecipeDetailCardImage src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.extra}`} alt="" />
+            <S.RecipeDetailCardImage src={imgSrc} alt="레시피 상세 이미지" />
             <S.RecipeDetailCardContent>
               <Text color="black" typography="black_xl">
                 {item.title}
