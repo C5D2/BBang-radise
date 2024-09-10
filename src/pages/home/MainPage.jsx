@@ -243,7 +243,7 @@ const MainPage = () => {
             로그인
           </Button>
         </MainPageButton>
-        <MainPageBottomImg src="/homeSample/bottom.webp" />
+        <MainPageBottomImg src="/homeSample/bottom.webp" alt="bottom" />
       </MainPageBottomWrapper>
     </Section>
   );

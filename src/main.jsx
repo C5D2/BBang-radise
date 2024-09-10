@@ -5,7 +5,6 @@ import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 
 const rootElement = document.getElementById('root');
-const root = ReactDOM.createRoot(rootElement);
 
 const app = (
   <React.StrictMode>
@@ -16,7 +15,7 @@ const app = (
 );
 
 if (rootElement?.hasChildNodes()) {
-  root.hydrate(app);
+  ReactDOM.hydrateRoot(rootElement, app);
 } else {
-  root.render(app);
+  ReactDOM.createRoot(rootElement).render(app);
 }
