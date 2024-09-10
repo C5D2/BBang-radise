@@ -15,7 +15,8 @@
       "/",
       "/class",
       "/recipe"
-    ]
+    ],
+    "source": "dist"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.29.2",
