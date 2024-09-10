@@ -23,12 +23,13 @@ MainPageCover.propTypes = {
   srcSet: PropTypes.string,
   sizes: PropTypes.string,
   width: PropTypes.string,
+  alt: PropTypes.string,
   margintop: PropTypes.string,
   marginleft: PropTypes.string,
 };
 
-function MainPageCover({ src, srcSet, sizes, width, margintop, marginleft }) {
-  return <MainPageCoverImg src={src} srcSet={srcSet} sizes={sizes} width={width} marginTop={margintop} marginLeft={marginleft} />;
+function MainPageCover({ src, srcSet, sizes, width, alt, margintop, marginleft }) {
+  return <MainPageCoverImg src={src} srcSet={srcSet} sizes={sizes} width={width} alt={alt} marginTop={margintop} marginLeft={marginleft} />;
 }
 
 export default MainPageCover;

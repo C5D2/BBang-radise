@@ -10,6 +10,7 @@ import Modal from '@components/ui/Modal';
 import useMemberStore from '@zustand/memberStore.mjs';
 import { ClassListContent, ClassListPage, ClassListSearch, ClassListSub, ClassListText, ClassListWrapper } from '@styles/class/classList.style';
 import { useModalStore } from '@zustand/modalStore.mjs';
+import MetaTag from '@components/ui/MetaTag';
 
 function ClassList() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -46,9 +47,12 @@ function ClassList() {
   };
 
   const classList = data?.item.map((item) => <ClassCard key={item._id} item={item} />);
+  const path = `${import.meta.env.VITE_BASE_URL}/class`;
 
   return (
     <Section>
+      <MetaTag title={'베이킹 클래스 목록'} description={'베이킹 클래스 목록입니다.'} url={path} />
+
       <ClassListWrapper>
         <ClassListPage>
           <ClassListText>

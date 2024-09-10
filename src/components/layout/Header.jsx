@@ -80,7 +80,7 @@ function Header() {
   return (
     <HeaderStyle>
       <Link to="/">
-        <LogoLayout>{isMobile < 768 ? <img src={HomeMobileIcon} /> : <img src={HomeWebIcon} />}</LogoLayout>
+        <LogoLayout>{isMobile < 768 ? <img src={HomeMobileIcon} alt="모바일 로고" /> : <img src={HomeWebIcon} alt="데스크톱 로고" />}</LogoLayout>
       </Link>
       <Navigation>
         <li>

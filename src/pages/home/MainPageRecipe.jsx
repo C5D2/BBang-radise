@@ -53,7 +53,7 @@ function MainPageRecipe({ title, img }) {
       <MainPageRecipeArrow className="recipe-hover">
         <ArrowIcon width="13px" stroke="var(--primary-01)" />
       </MainPageRecipeArrow>
-      <MainPageRecipeImg src={img} />
+      <MainPageRecipeImg src={img} alt="레시피 대표 이미지" />
       <MainPageRecipeTitle>{title}</MainPageRecipeTitle>
     </MainPageRecipeCard>
   );

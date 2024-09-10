@@ -1,4 +1,5 @@
 import Badge from '@components/ui/Badge';
+import MetaTag from '@components/ui/MetaTag';
 import Modal from '@components/ui/Modal';
 import Section from '@components/ui/Section';
 import Text from '@components/ui/Text';
@@ -57,7 +58,7 @@ function ClassDetail() {
   const mainImage = item?.mainImages[0].name;
   const detailImages = item?.extra?.detailImages?.map((image) => (
     <swiper-slide key={image.name}>
-      <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${image.name}`} />
+      <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${image.name}`} alt="클래스 상세 이미지" />
       {expired && <ClassDetailImgCover />}
     </swiper-slide>
   ));
@@ -106,8 +107,13 @@ function ClassDetail() {
   const priceData = item?.price;
   const price = priceData?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
+  const path = `${import.meta.env.VITE_BASE_URL}/class/${_id}`;
+  const imgSrc = `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${mainImage}`;
+
   return (
     <Section>
+      <MetaTag title={item.name} description={item.content} imgSrc={imgSrc} url={path} />
+
       {toast.show && <Toast setToast={setToast} text={toast.message} />}
       <ClassDetailWrapper>
         <ClassDetailCover>
@@ -116,7 +122,7 @@ function ClassDetail() {
           <SwiperWrapper>
             <swiper-container slides-per-view="auto" centered-slides="true" space-between="10" autoplay-delay="3500" autoplay-pause-on-mouse-enter="true" speed="1200">
               <swiper-slide>
-                <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${mainImage}`} alt="클래스 이미지" />
+                <img src={imgSrc} alt="클래스 이미지" />
                 {expired && <ClassDetailImgCover />}
               </swiper-slide>
               {detailImages}
