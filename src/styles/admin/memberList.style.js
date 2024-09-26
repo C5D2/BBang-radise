@@ -8,8 +8,6 @@ export const AdminWrapper = styled.div`
   flex-direction: column;
 
   @media all and (min-width: 768px) {
-    width: 100%;
-    position: relative;
     padding-top: 120px;
     padding-right: 10px;
   }

@@ -29,7 +29,7 @@ MainPageCover.propTypes = {
 };
 
 function MainPageCover({ src, srcSet, sizes, width, alt, margintop, marginleft }) {
-  return <MainPageCoverImg src={src} srcSet={srcSet} sizes={sizes} width={width} alt={alt} marginTop={margintop} marginLeft={marginleft} />;
+  return <MainPageCoverImg src={src} srcSet={srcSet} sizes={sizes} width={width} alt={alt} margintop={margintop} marginleft={marginleft} />;
 }
 
 export default MainPageCover;

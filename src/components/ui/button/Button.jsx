@@ -18,6 +18,7 @@ const ButtonStyle = styled.button`
 
   &:hover {
     box-shadow: 1px 1px 8px 4px ${(props) => (props.type == 'submit' ? 'var(--primary-01)' : props.disabled ? '0' : props.color)};
+    cursor: pointer;
   }
 `;
 
