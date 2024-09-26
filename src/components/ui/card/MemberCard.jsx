@@ -14,6 +14,7 @@ const Li = styled.li`
 
 const StCard = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   align-items: center;
   margin: 0 auto;
@@ -37,11 +38,17 @@ const MemberInfo = styled.div`
 
 const TextInfo = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 10px;
   margin-left: 20px;
-  width: 60%;
   justify-content: space-evenly;
   flex-direction: column;
+`;
+
+const TypeInfo = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
 `;
 
 const MemberTypeChip = styled.div`
@@ -50,7 +57,7 @@ const MemberTypeChip = styled.div`
   color: var(--white);
   text-align: center;
   border-radius: 20px;
-  background-color: var(--primary-01);
+  background-color: var(--primary-02);
   font-size: 16px;
   font-weight: 600;
 `;
@@ -58,7 +65,6 @@ const MemberTypeChip = styled.div`
 const Name = styled.p`
   font-weight: 600;
   font-size: 20px;
-  width: 500px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -67,10 +73,19 @@ const Name = styled.p`
 const Instruction = styled.span`
   font-size: 18px;
   color: var(--black);
-  width: 300px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+`;
+
+const ContactInfo = styled.div`
+  display: flex;
+  gap: 3rem;
+  font-size: 16px;
+
+  @media (max-width: 506px) {
+    display: none;
+  }
 `;
 
 function MemberCard({ memberItemData }) {
@@ -94,20 +109,24 @@ function MemberCard({ memberItemData }) {
               )}
             </ImgWrap>
             <TextInfo>
-              <Instruction>{_id}</Instruction>
-              <MemberTypeChip>{type}</MemberTypeChip>
+              <TypeInfo>
+                <Instruction>{_id}</Instruction>
+                <MemberTypeChip>{type}</MemberTypeChip>
+              </TypeInfo>
               <Name>{name}</Name>
               <Instruction>{instruction}</Instruction>
             </TextInfo>
           </MemberInfo>
-          <div>
-            <span>{email}</span>
-          </div>
-          <div>
-            <span>{phone}</span>
-          </div>
+          <ContactInfo>
+            <div>{email}</div>
+            <div>{phone}</div>
+          </ContactInfo>
         </StCard>
-        {extra?.confirm === false ? <Button onClick={handleRankUpClick}>등업 승인하기</Button> : null}
+        {extra?.confirm === false ? (
+          <Button color="var(--primary-01)" onClick={handleRankUpClick}>
+            등업 승인하기
+          </Button>
+        ) : null}
       </Li>
     </>
   );

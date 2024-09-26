@@ -55,8 +55,23 @@ function Login() {
     },
   });
 
-  const onSubmit = async (formData) => {
+  const adminAccountLogin = async () => {
+    const adminEmail = 'admin@market.com';
+    const adminPassword = '11111111';
+
     try {
+      await onSubmit({ email: adminEmail, password: adminPassword });
+    } catch (error) {
+      setToast({ show: true, message: error.response?.data.message });
+    }
+  };
+
+  const onSubmit = async (data) => {
+    try {
+      const formData = new FormData();
+      formData.set('email', data.email);
+      formData.set('password', data.password);
+
       const res = await postLogin(formData);
       setUserData({
         _id: res.data.item._id,
@@ -123,8 +138,10 @@ function Login() {
 
             <S.LoginButton>
               <Submit>로그인</Submit>
+              <Button color="var(--gray-07)" onClick={adminAccountLogin}>
+                admin 계정 로그인
+              </Button>
               <Button
-                type="button"
                 color="var(--primary-02)"
                 onClick={() => {
                   navigate('/signup');

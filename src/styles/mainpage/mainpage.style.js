@@ -32,7 +32,7 @@ export const MainPageCoverWrapper = styled.div`
   }
 
   & img:first-of-type {
-    margin-top: -280px;
+    margin-top: -200px;
 
     @media (max-width: 767px) {
       margin-top: -220px;

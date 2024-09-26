@@ -17,7 +17,7 @@ const SimpleButton = ({ children, ...rest }) => {
 };
 
 SimpleButton.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
 };
 
 export default SimpleButton;
