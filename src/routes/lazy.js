@@ -1,0 +1,20 @@
+import { lazy } from 'react';
+
+export const MainPage = lazy(() => import('@pages/home/MainPage'));
+export const ClassList = lazy(() => import('@pages/class/ClassList'));
+export const ClassDetail = lazy(() => import('@pages/class/ClassDetail'));
+export const ClassAdd = lazy(() => import('@pages/class/ClassAdd'));
+export const ClassEdit = lazy(() => import('@pages/class/ClassEdit'));
+export const ClassOrder = lazy(() => import('@pages/class/ClassOrder'));
+export const ClassQnAList = lazy(() => import('@pages/class/ClassQnAList'));
+export const RecipeList = lazy(() => import('@pages/recipe/RecipeList'));
+export const RecipeDetail = lazy(() => import('@pages/recipe/RecipeDetail'));
+export const ReplyList = lazy(() => import('@pages/recipe/ReplyList'));
+export const RecipeAdd = lazy(() => import('@pages/recipe/RecipeAdd'));
+export const RecipeEdit = lazy(() => import('@pages/recipe/RecipeEdit'));
+export const MyPage = lazy(() => import('@pages/mypage/MyPage'));
+export const MyPageEdit = lazy(() => import('@pages/mypage/MyPageEdit'));
+export const Login = lazy(() => import('@pages/login/Login'));
+export const SignUp = lazy(() => import('@pages/signup/SignUp'));
+export const SignUpWelcome = lazy(() => import('@pages/signup/SignUpWelcome'));
+export const Admin = lazy(() => import('@pages/admin/Admin'));

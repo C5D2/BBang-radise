@@ -1,16 +1,10 @@
 import Layout from '@components/layout';
 import ErrorPage from '@pages/ErrorPage';
-import Admin from '@pages/admin/Admin';
-import { ClassAdd, ClassDetail, ClassEdit, ClassList, ClassQnAList } from '@pages/class';
-import ClassOrder from '@pages/class/ClassOrder';
-import MainPage from '@pages/home/MainPage';
-import Login from '@pages/login/Login';
-import { MyPage, MyPageEdit } from '@pages/mypage';
-import { RecipeAdd, RecipeDetail, RecipeEdit, RecipeList } from '@pages/recipe';
-import ReplyList from '@pages/recipe/ReplyList';
-import { SignUp, SignUpWelcome } from '@pages/signup';
 import { PrivateRoute } from '@routes/PrivateRoute';
 import { createBrowserRouter } from 'react-router-dom';
+import * as Lazy from '@/routes/lazy';
+import { Loading } from '@components/ui/Loading';
+import { Suspense } from 'react';
 
 const router = createBrowserRouter([
   {
@@ -20,21 +14,35 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <MainPage />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Lazy.MainPage />
+          </Suspense>
+        ),
       },
       {
         path: 'class',
-        element: <ClassList />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Lazy.ClassList />
+          </Suspense>
+        ),
       },
       {
         path: 'class/:_id',
-        element: <ClassDetail />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Lazy.ClassDetail />
+          </Suspense>
+        ),
       },
       {
         path: 'class/add',
         element: (
           <PrivateRoute>
-            <ClassAdd />
+            <Suspense fallback={<Loading />}>
+              <Lazy.ClassAdd />
+            </Suspense>
           </PrivateRoute>
         ),
       },
@@ -42,7 +50,9 @@ const router = createBrowserRouter([
         path: 'class/:_id/edit',
         element: (
           <PrivateRoute>
-            <ClassEdit />
+            <Suspense fallback={<Loading />}>
+              <Lazy.ClassEdit />
+            </Suspense>
           </PrivateRoute>
         ),
       },
@@ -50,25 +60,43 @@ const router = createBrowserRouter([
         path: 'class/:_id/order',
         element: (
           <PrivateRoute>
-            <ClassOrder />
+            <Suspense fallback={<Loading />}>
+              <Lazy.ClassOrder />
+            </Suspense>
           </PrivateRoute>
         ),
       },
       {
         path: 'class/qna',
-        element: <ClassQnAList />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Lazy.ClassQnAList />
+          </Suspense>
+        ),
       },
       {
         path: 'recipe',
-        element: <RecipeList />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Lazy.RecipeList />,
+          </Suspense>
+        ),
       },
       {
         path: 'recipe/:_id',
-        element: <RecipeDetail />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Lazy.RecipeDetail />
+          </Suspense>
+        ),
         children: [
           {
             index: true,
-            element: <ReplyList />,
+            element: (
+              <Suspense fallback={<Loading />}>
+                <Lazy.ReplyList />
+              </Suspense>
+            ),
           },
         ],
       },
@@ -76,7 +104,9 @@ const router = createBrowserRouter([
         path: 'recipe/add',
         element: (
           <PrivateRoute>
-            <RecipeAdd />
+            <Suspense fallback={<Loading />}>
+              <Lazy.RecipeAdd />
+            </Suspense>
           </PrivateRoute>
         ),
       },
@@ -84,7 +114,9 @@ const router = createBrowserRouter([
         path: 'recipe/:_id/edit',
         element: (
           <PrivateRoute>
-            <RecipeEdit />
+            <Suspense fallback={<Loading />}>
+              <Lazy.RecipeEdit />
+            </Suspense>
           </PrivateRoute>
         ),
       },
@@ -92,7 +124,9 @@ const router = createBrowserRouter([
         path: 'mypage/:_id',
         element: (
           <PrivateRoute>
-            <MyPage />
+            <Suspense fallback={<Loading />}>
+              <Lazy.MyPage />
+            </Suspense>
           </PrivateRoute>
         ),
       },
@@ -100,27 +134,43 @@ const router = createBrowserRouter([
         path: 'mypage/:_id/edit',
         element: (
           <PrivateRoute>
-            <MyPageEdit />
+            <Suspense fallback={<Loading />}>
+              <Lazy.MyPageEdit />
+            </Suspense>
           </PrivateRoute>
         ),
       },
       {
         path: 'login',
-        element: <Login />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Lazy.Login />
+          </Suspense>
+        ),
       },
       {
         path: 'signup',
-        element: <SignUp />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Lazy.SignUp />
+          </Suspense>
+        ),
       },
       {
         path: 'signup-alert',
-        element: <SignUpWelcome />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Lazy.SignUpWelcome />
+          </Suspense>
+        ),
       },
       {
         path: 'admin',
         element: (
           <PrivateRoute requiredRole="admin">
-            <Admin />
+            <Suspense fallback={<Loading />}>
+              <Lazy.Admin />
+            </Suspense>
           </PrivateRoute>
         ),
       },
