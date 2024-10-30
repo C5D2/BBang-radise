@@ -17,7 +17,7 @@ export const useGetClassInfo = (page, searchParams) => {
         },
       }),
     select: (response) => response.data,
-    suspense: true,
+    suspense: false,
   });
 };
 
