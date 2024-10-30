@@ -16,6 +16,7 @@ export default defineConfig({
     outDir: 'dist',
   },
   resolve: {
+    extensions: ['.js', '.jsx', '.json'],
     alias: [
       { find: '@', replacement: '/src' },
       { find: '@assets', replacement: '/src/assets' },
