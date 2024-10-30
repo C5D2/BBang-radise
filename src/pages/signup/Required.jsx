@@ -1,11 +1,11 @@
 import Text from '@components/ui/Text';
 import Input from '@components/ui/Input';
-import ValidationButton from '@components/ui/button/ValidationButton';
+import ValidationButton from '@components/ui/Button/ValidationButton';
 import useUserApis from '@hooks/apis/useUserApis.mjs';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as S from '@styles/signup/signup.style';
-import Submit from '@components/ui/button/Submit';
+import Submit from '@components/ui/Button/Submit';
 import useFormStore from '@zustand/formStore.mjs';
 import PropTypes from 'prop-types';
 

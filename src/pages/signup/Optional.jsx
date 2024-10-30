@@ -1,7 +1,7 @@
 import Input from '@components/ui/Input';
 import TextArea from '@components/ui/TextArea';
 import { useForm } from 'react-hook-form';
-import Submit from '@components/ui/button/Submit';
+import Submit from '@components/ui/Button/Submit';
 import * as S from '@styles/signup/signup.style';
 import useFormStore from '@zustand/formStore.mjs';
 import PropTypes from 'prop-types';

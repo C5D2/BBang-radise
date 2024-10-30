@@ -1,6 +1,6 @@
 import Section from '@components/ui/Section';
 import Text from '@components/ui/Text';
-import MemberCard from '@components/ui/card/MemberCard';
+import MemberCard from '@components/ui/Card/MemberCard';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import SimpleButton from '@pages/mypage/SimpleButton';
 import * as S from '@styles/admin/memberList.style';

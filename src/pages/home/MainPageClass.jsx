@@ -1,4 +1,4 @@
-import BookmarkButton from '@components/ui/button/BookmarkButton';
+import BookmarkButton from '@components/ui/Button/BookmarkButton';
 import Badge from '@components/ui/Badge';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';

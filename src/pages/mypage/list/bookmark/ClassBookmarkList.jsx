@@ -1,4 +1,4 @@
-import ClassCard from '@components/ui/card/ClassCard';
+import ClassCard from '@components/ui/Card/ClassCard';
 import { ClassListContent } from '@styles/class/classList.style';
 import PropTypes from 'prop-types';
 

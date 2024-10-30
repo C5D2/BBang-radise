@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import * as S from '@styles/recipe/recipelistitem.style';
-import BookmarkButton from '@components/ui/button/BookmarkButton';
+import BookmarkButton from '@components/ui/Button/BookmarkButton';
 import Text from '@components/ui/Text';
 import ArrowIcon from '@assets/ArrowIcon';
 

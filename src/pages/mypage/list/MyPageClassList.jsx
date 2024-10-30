@@ -1,5 +1,5 @@
 import Text from '@components/ui/Text';
-import ClassCard from '@components/ui/card/ClassCard';
+import ClassCard from '@components/ui/Card/ClassCard';
 import PropTypes from 'prop-types';
 import { useGetMyClassList } from '@hooks/queries/user';
 import { ClassListContent } from '@styles/class/classList.style';
