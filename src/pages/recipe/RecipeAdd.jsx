@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import * as S from '@styles/recipe/recipeadd.style';
 import Section from '@components/ui/Section';
 import Submit from '@components/ui/Button/Submit';
-import Button from '@components/ui/Button/Button';
+import Button from '@components/ui/Button/DefaultButton';
 import useFileApis from '@hooks/apis/useFileApis.mjs';
 import { useEffect, useState } from 'react';
 import DefaultImagePreview from '@assets/DefaultImagePreview.png';

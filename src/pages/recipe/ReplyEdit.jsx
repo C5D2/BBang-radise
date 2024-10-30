@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import PropTypes from 'prop-types';
 import TextArea from '@components/ui/TextArea';
-import Button from '@components/ui/Button/Button';
+import Button from '@components/ui/Button/DefaultButton';
 import * as S from '@styles/recipe/replyedit.style';
 import { useModalStore } from '@zustand/modalStore.mjs';
 import Modal from '@components/ui/Modal';

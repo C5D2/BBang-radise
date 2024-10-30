@@ -1,7 +1,7 @@
 import Text from '@components/ui/Text';
 import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
-import Button from '@components/ui/Button/Button';
+import Button from '@components/ui/Button/DefaultButton';
 import Submit from '@components/ui/Button/Submit';
 import { useModalStore } from '@zustand/modalStore.mjs';
 

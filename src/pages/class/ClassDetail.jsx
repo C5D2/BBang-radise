@@ -5,7 +5,7 @@ import Section from '@components/ui/Section';
 import Text from '@components/ui/Text';
 import Toast from '@components/ui/Toast';
 import BookmarkButton from '@components/ui/Button/BookmarkButton';
-import Button from '@components/ui/Button/Button';
+import Button from '@components/ui/Button/DefaultButton';
 import RoundButton from '@components/ui/Button/RoundButton';
 import { useGetClassDetail } from '@hooks/queries/class';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
