@@ -12,6 +12,7 @@ export const useGetClassInfo = (page, searchParams) => {
         params: {
           page,
           limit: import.meta.env.VITE_POST_LIMIT,
+          sort: JSON.stringify({ updatedAt: -1 }),
           keyword: searchParams.get('keyword'),
         },
       }),
