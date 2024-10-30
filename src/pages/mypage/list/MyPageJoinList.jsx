@@ -1,5 +1,5 @@
 import Text from '@components/ui/Text';
-import ClassCard from '@components/ui/card/ClassCard';
+import ClassCard from '@components/ui/Card/ClassCard';
 import { ClassListContent } from '@styles/class/classList.style';
 import { MyPageListAlert } from '@styles/mypage/mypageList.style';
 import PropTypes from 'prop-types';

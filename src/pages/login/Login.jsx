@@ -2,14 +2,14 @@ import { useForm } from 'react-hook-form';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useMemberStore from '@zustand/memberStore.mjs';
 import Input from '@components/ui/Input';
-import Button from '@components/ui/button/Button';
+import Button from '@components/ui/Button/Button';
 import useUserApis from '@hooks/apis/useUserApis.mjs';
 import Section from '@components/ui/Section';
 import * as S from '@styles/login/login.style';
 import Text from '@components/ui/Text';
 import Toast from '@components/ui/Toast';
 import { useState } from 'react';
-import Submit from '@components/ui/button/Submit';
+import Submit from '@components/ui/Button/Submit';
 
 function Login() {
   const location = useLocation();

@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Input from '@components/ui/Input';
 import TextArea from '@components/ui/TextArea';
 import useFileApis from '@hooks/apis/useFileApis.mjs';
-import Button from '@components/ui/button/Button';
+import Button from '@components/ui/Button/Button';
 import Section from '@components/ui/Section';
 import Text from '@components/ui/Text';
 import Select from '@components/ui/Select';
@@ -15,7 +15,7 @@ import useClassApis from '@hooks/apis/useClassApis.mjs';
 import Modal from '@components/ui/Modal';
 import { useModalStore } from '@zustand/modalStore.mjs';
 import Toast from '@components/ui/Toast';
-import Submit from '@components/ui/button/Submit';
+import Submit from '@components/ui/Button/Submit';
 
 function ClassEdit() {
   const navigate = useNavigate();

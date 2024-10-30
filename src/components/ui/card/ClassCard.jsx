@@ -1,7 +1,7 @@
 import ArrowIcon from '@assets/ArrowIcon';
 import Badge from '@components/ui/Badge';
 import Text from '@components/ui/Text';
-import BookmarkButton from '@components/ui/button/BookmarkButton';
+import BookmarkButton from '@components/ui/Button/BookmarkButton';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useLocation, useNavigate } from 'react-router-dom';

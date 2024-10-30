@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
 import * as S from '@styles/recipe/recipedetail.style';
 import Section from '@components/ui/Section';
 import useMemberStore from '@zustand/memberStore.mjs';
-import RoundButton from '@components/ui/button/RoundButton';
+import RoundButton from '@components/ui/Button/RoundButton';
 import Text from '@components/ui/Text';
 import GlobalRecipeContentStyle from '@styles/recipe/GlobalRecipeContentStyle';
 import MetaTag from '@components/ui/MetaTag';

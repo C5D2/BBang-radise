@@ -1,5 +1,5 @@
 import DefaultProfile from '@assets/DefaultProfile';
-import Button from '@components/ui/button/Button';
+import Button from '@components/ui/Button/Button';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import useAdminApis from '@hooks/apis/useAdminApis.mjs';

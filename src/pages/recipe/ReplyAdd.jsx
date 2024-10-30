@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import TextArea from '@components/ui/TextArea';
-import Submit from '@components/ui/button/Submit';
+import Submit from '@components/ui/Button/Submit';
 import * as S from '@styles/recipe/replyadd.style';
 import useMemberStore from '@zustand/memberStore.mjs';
 import Modal from '@components/ui/Modal';

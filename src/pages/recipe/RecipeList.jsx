@@ -8,7 +8,7 @@ import Search from '@components/ui/Search';
 import Section from '@components/ui/Section';
 import useMemberStore from '@zustand/memberStore.mjs';
 import Modal from '@components/ui/Modal';
-import RoundButton from '@components/ui/button/RoundButton';
+import RoundButton from '@components/ui/Button/RoundButton';
 import * as S from '@styles/recipe/recipelist.style';
 import { useModalStore } from '@zustand/modalStore.mjs';
 import MetaTag from '@components/ui/MetaTag';

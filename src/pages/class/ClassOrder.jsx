@@ -1,6 +1,6 @@
 import Section from '@components/ui/Section';
 import Text from '@components/ui/Text';
-import Button from '@components/ui/button/Button';
+import Button from '@components/ui/Button/Button';
 import useMemberStore from '@zustand/memberStore.mjs';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
