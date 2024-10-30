@@ -28,7 +28,7 @@ const LogoLayout = styled.div`
   }
 `;
 
-const Navigation = styled.nav`
+const Navigation = styled.menu`
   display: flex;
   height: 42px;
   flex-grow: 1;
