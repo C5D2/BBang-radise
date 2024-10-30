@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useMemberStore from '@zustand/memberStore.mjs';
 import Input from '@components/ui/Input';
-import Button from '@components/ui/Button/Button';
+import Button from '@components/ui/Button/DefaultButton';
 import useUserApis from '@hooks/apis/useUserApis.mjs';
 import Section from '@components/ui/Section';
 import * as S from '@styles/login/login.style';

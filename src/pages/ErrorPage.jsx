@@ -1,6 +1,6 @@
 import Footer from '@components/layout/Footer';
 import Header from '@components/layout/Header';
-import Button from '@components/ui/Button/Button';
+import Button from '@components/ui/Button/DefaultButton';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 

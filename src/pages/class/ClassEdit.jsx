@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Input from '@components/ui/Input';
 import TextArea from '@components/ui/TextArea';
 import useFileApis from '@hooks/apis/useFileApis.mjs';
-import Button from '@components/ui/Button/Button';
+import Button from '@components/ui/Button/DefaultButton';
 import Section from '@components/ui/Section';
 import Text from '@components/ui/Text';
 import Select from '@components/ui/Select';

@@ -1,5 +1,5 @@
 import Section from '@components/ui/Section';
-import Button from '@components/ui/Button/Button';
+import Button from '@components/ui/Button/DefaultButton';
 import MainPageClass from '@pages/home/MainPageClass';
 import { register } from 'swiper/element/bundle';
 import MainPageRecipe from '@pages/home/MainPageRecipe';

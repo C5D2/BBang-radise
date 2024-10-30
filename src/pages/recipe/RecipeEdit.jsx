@@ -4,7 +4,7 @@ import QuillEditor from '@components/ui/QuillEditor/QuillEditor';
 import Section from '@components/ui/Section';
 import Select from '@components/ui/Select';
 import Text from '@components/ui/Text';
-import Button from '@components/ui/Button/Button';
+import Button from '@components/ui/Button/DefaultButton';
 import Submit from '@components/ui/Button/Submit';
 import useFileApis from '@hooks/apis/useFileApis.mjs';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';

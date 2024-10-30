@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useEffect, useState } from 'react';
 import useUserApis from '@hooks/apis/useUserApis.mjs';
-import Button from '@components/ui/Button/Button';
+import Button from '@components/ui/Button/DefaultButton';
 import Input from '@components/ui/Input';
 import TextArea from '@components/ui/TextArea';
 import Section from '@components/ui/Section';

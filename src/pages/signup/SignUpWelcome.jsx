@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Section from '@components/ui/Section';
-import Button from '@components/ui/Button/Button';
+import Button from '@components/ui/Button/DefaultButton';
 import * as S from '@styles/signup/signup.style';
 import Text from '@components/ui/Text';
 
